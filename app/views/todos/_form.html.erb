@@ -1,0 +1,32 @@
+<%= form_with(model: todo, local: true) do |form| %>
+  <% if todo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+
+      <ul>
+      <% todo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :登録日 %>
+    <%= form.date_select :date, id: :todo_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :タイトル %>
+    <%= form.text_area :text, id: :todo_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :締切日 %>
+    <%= form.date_select :deadline, id: :todo_deadline %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

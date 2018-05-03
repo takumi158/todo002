@@ -1,0 +1,23 @@
+<CENTER>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>登録日:</strong>
+  <%= @todo.date %>
+</p>
+
+<p>
+  <strong>タイトル:</strong>
+  <%= @todo.text %>
+</p>
+
+<p>
+  <strong>締切日:</strong>
+  <%= @todo.deadline %>
+</p>
+
+
+<%= link_to 'TOP', top_index_path %> |
+<%= link_to 'ToDo一覧', todos_path %> |
+<%= link_to '削除', todos_path %>
+</CENTER>

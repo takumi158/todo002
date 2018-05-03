@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-05-02
+  text: MyText
+  deadline: 2018-05-02
+
+two:
+  date: 2018-05-02
+  text: MyText
+  deadline: 2018-05-02
